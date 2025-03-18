@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Dashboard - TalentSphere</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <a href="index.html">
+                    Talent<span class="highlight">Sphere</span>
+                </a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-links">
+                    <li>
+                        <a href="./../index.html">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Main Page</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="skills.html">
+                            <i class="fas fa-code"></i>
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./engagement.html">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Engagement</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#logout" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="overview-container">
+                <div class="welcome-banner">
+                    <div class="welcome-text">
+                        <h1>Welcome Back, <span class="highlight">John!</span></h1>
+                        <p>Here's what's happening with your profile today.</p>
+                    </div>
+                    <div class="date-time">
+                        <div class="current-date"></div>
+                        <div class="current-time"></div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Profile Views</h3>
+                            <div class="stat-number" data-target="1234">1000</div>
+                            <div class="stat-trend up">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>12% from last week</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Active Projects</h3>
+                            <div class="stat-number" data-target="25">5</div>
+                            <div class="stat-trend up">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>3 new this month</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Connections</h3>
+                            <div class="stat-number" data-target="789">100</div>
+                            <div class="stat-trend up">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>15 new connections</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Recent Activity -->
+                    <div class="dashboard-card activity-card">
+                        <div class="card-header">
+                            <h2>Recent Activity</h2>
+                            <button class="view-all-btn">View All</button>
+                        </div>
+                        <div class="activity-list">
+                            <!-- Activity items will be added dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Deadlines -->
+                    <div class="dashboard-card deadlines-card">
+                        <div class="card-header">
+                            <h2>Upcoming Deadlines</h2>
+                            <button class="add-deadline-btn">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="deadlines-list">
+                            <div class="deadline-item priority-high">
+                                <div class="deadline-header">
+                                    <span class="deadline-title">E-commerce Website</span>
+                                    <span class="deadline-date">Due: 28/2/2024</span>
+                                </div>
+                                <div class="deadline-progress">
+                                    <div class="progress-info">
+                                        <span class="progress-percentage">75%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="deadline-item priority-medium">
+                                <div class="deadline-header">
+                                    <span class="deadline-title">Mobile App Design</span>
+                                    <span class="deadline-date">Due: 15/3/2024</span>
+                                </div>
+                                <div class="deadline-progress">
+                                    <div class="progress-info">
+                                        <span class="progress-percentage">45%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="dashboard-card actions-card">
+                        <h2>Quick Actions</h2>
+                        <div class="actions-grid">
+                            <button class="action-btn">
+                                <i class="fas fa-plus"></i>
+                                <span>New Project</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-user-edit"></i>
+                                <span>Edit Profile</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span>Messages</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Transactions</span>
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Skills Progress -->
+                    <div class="dashboard-card skills-card">
+                        <h2>Skills Progress</h2>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="percentage">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="percentage">75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="percentage">70%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
